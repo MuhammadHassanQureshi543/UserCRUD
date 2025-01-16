@@ -28,3 +28,4 @@ C:\Users\muham\source\repos\UserProject\Application\obj\Debug\net8.0\Application
 C:\Users\muham\source\repos\UserProject\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\muham\source\repos\UserProject\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\muham\source\repos\UserProject\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\muham\source\repos\UserProject\Application\obj\Debug\net8.0\Application.sourcelink.json

@@ -90,5 +90,40 @@ namespace UserProject.Controllers
             _responseAPI.statusCode = HttpStatusCode.OK;
             return _responseAPI;
         }
+
+        [HttpGet]
+        [Route("GetAllUserbyProcedure")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<ResponseVM>> GetUserbyprocdure()
+        {
+            var data = await _userService.GetUserbyProcedure();
+            if (data == null)
+                return NotFound("No Data Found");
+            _responseAPI.Data = data;
+            _responseAPI.status = true;
+            _responseAPI.statusCode = HttpStatusCode.OK;
+            return _responseAPI;
+        }
+
+        [HttpPost]
+        [Route("GetUserbyNameUsingProcedure")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<ResponseVM>> GetUserbyNameUsingProcedure([FromBody] string name)
+        {
+            if (name == null)
+                return BadRequest("Give a Valid Name");
+            var data = await _userService.GetUserDetailsbyNameUsingProcedure(name);
+            if (data == null)
+                return NotFound("No user found");
+            _responseAPI.Data = data;
+            _responseAPI.status = true;
+            _responseAPI.statusCode = HttpStatusCode.OK;
+            return _responseAPI;
+        }
     }
 }

@@ -15,9 +15,11 @@ namespace Infrastructure.Services
     public class UserServices : IUserService
     {
         private readonly AppDbContext _dbContext;
-        public UserServices(AppDbContext dbContext)
+        private readonly StoredProcedureQurey _storedprocedurequrey;
+        public UserServices(AppDbContext dbContext, StoredProcedureQurey storedprocedurequrey)
         {
             _dbContext = dbContext;
+            _storedprocedurequrey = storedprocedurequrey;
         }
 
         public async Task<List<UserVM>> GetAll()
@@ -80,6 +82,19 @@ namespace Infrastructure.Services
             await _dbContext.SaveChangesAsync();
 
             return "User is Delted Successful";
+        }
+
+        public async Task<List<UserVM>> GetUserbyProcedure()
+        {
+            return await _storedprocedurequrey.StoreProcedureGetAllUser();
+        }
+
+        public async Task<UserVM> GetUserDetailsbyNameUsingProcedure(string name)
+        {
+            var data = await _storedprocedurequrey.StoredProcedureGetUserbyName(name);
+            if (data.FirstName == null)
+                return null;
+            return data;
         }
     }
 }

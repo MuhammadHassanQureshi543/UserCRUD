@@ -354,3 +354,4 @@ C:\Users\muham\source\repos\UserProject\UserProject\obj\Debug\net8.0\refint\User
 C:\Users\muham\source\repos\UserProject\UserProject\obj\Debug\net8.0\UserProject.pdb
 C:\Users\muham\source\repos\UserProject\UserProject\obj\Debug\net8.0\UserProject.genruntimeconfig.cache
 C:\Users\muham\source\repos\UserProject\UserProject\obj\Debug\net8.0\ref\UserProject.dll
+C:\Users\muham\source\repos\UserProject\UserProject\obj\Debug\net8.0\UserProject.sourcelink.json

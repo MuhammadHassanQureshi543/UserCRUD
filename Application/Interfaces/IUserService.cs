@@ -14,5 +14,7 @@ namespace Application.Interfaces
         Task<string> RegisterUser(RegisterUser model);
         Task<string> UpdateUser(int id,RegisterUser model);
         Task<string> DelteUser(int id);
+        Task<List<UserVM>> GetUserbyProcedure();
+        Task<UserVM> GetUserDetailsbyNameUsingProcedure(string name);
     }
 }

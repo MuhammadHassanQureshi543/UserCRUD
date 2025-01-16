@@ -36,3 +36,4 @@ C:\Users\muham\source\repos\UserProject\Infrastructure\obj\Debug\net8.0\refint\I
 C:\Users\muham\source\repos\UserProject\Infrastructure\obj\Debug\net8.0\Infrastructure.pdb
 C:\Users\muham\source\repos\UserProject\Infrastructure\obj\Debug\net8.0\Infrastructure.genruntimeconfig.cache
 C:\Users\muham\source\repos\UserProject\Infrastructure\obj\Debug\net8.0\ref\Infrastructure.dll
+C:\Users\muham\source\repos\UserProject\Infrastructure\obj\Debug\net8.0\Infrastructure.sourcelink.json
